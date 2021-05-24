@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario</h1>
+      </header>
+      <form id="forma" action="javascript:;">
+        <p><em>El borde azul indica obligatorio</em></p>
+        <p>
+          <label accesskey="N">
+            Boleta<br>
+            <input name="boleta" type="text" autofocus required
+                   pattern=".{10}" maxlength="10" size="12"
+                   placeholder="10 caracteres">
+          </label>
+          <br><output id="salidaBoleta"></output>
+        </p>
+        <p>
+          <label accesskey="S">
+            Nombre<br>
+            <input name="nombre" type="text" required
+                   pattern=".{5,30}" maxlength="30" size="33"
+                   placeholder= "Ingrese su nombre:">
+          </label>
+          <br><output id="salidaNombre"></output>
+        </p>
+        <p>
+          <label accesskey="I">
+            Grupo<br>
+            <input name="grupo" type="text" required
+                   pattern=".{5,30}" maxlength="30" size="33"
+                   placeholder= "Ingrese su grupo:">
+          </label>
+          <br><output id="salidaGrupo"></output>
+        </p>
+        <p>
+          <label accesskey="C">
+            Materia<br>
+            <input name="materia" type="text" required 
+                   pattern=".{5,30}" maxlength="30" size="33"
+                   placeholder="Ingrese la materia:">
+          </label>
+          <br><output id="salidaMateria"></output>
+        </p>
+        <p>
+            <label accesskey="F">
+                Fecha<br>
+                <input name="fecha" type="date" autofocus required max="2022-01-24"
+                    min="2021-01-24">
+            </label>
+            <br><em>año-mes-día (ej. 2021-03-30)</em>
+            <br><output id="salidaFecha"></output>
+        </p>
+        <p>
+          <input type="submit" value="Procesar" accesskey="P">
+        </p>
+      </form>
+      <footer>
+        Copyright 2021 Oliver López Cerón 
+      </footer>
+      <script src="js/procesar.js"></script>
+</body>
+</html>
